@@ -1,0 +1,19 @@
+/* A font family name and a generic family name */
+font-family: Gill Sans Extrabold, sans-serif;
+font-family: "Goudy Bookletter 1911", sans-serif;
+
+/* A generic family name only */
+font-family: serif;
+font-family: sans-serif;
+font-family: monospace;
+font-family: cursive;
+font-family: fantasy;
+font-family: system-ui;
+font-family: emoji;
+font-family: math;
+font-family: fangsong;
+
+/* Global values */
+font-family: inherit;
+font-family: initial;
+font-family: unset;

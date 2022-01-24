@@ -1,0 +1,16 @@
+/* <p> with class 'txt-green' or includes 'text-green' */
+p.txt-red  {
+   color: red;
+}
+.txt-green{ 
+   color: green;
+}
+.bg-yellow {
+   background-color: yellow;
+}
+/* <div> with class inculudes both 'text-green' and 'bg-yellow' */
+div.txt-green.bg-yellow  {
+    color: green;
+    font-style: italic;
+}
+class-selector-example2.html

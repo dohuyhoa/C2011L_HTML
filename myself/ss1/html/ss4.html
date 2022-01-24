@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CSS float</title>
+		<meta charset="UTF-8">
+		<style>
+			.container{
+				background-color:#eee;
+				min-height: 135px;
+				padding: 5px;
+				text-align: left; 
+			}
+			.container span{
+				background-color: yellow;
+			}
+			#myElement{
+				background-color: lightgreen;
+				color: red;
+				font-weight:bold;
+				width: 180px;
+				height: 50px;
+				padding: 5px;
+				margin: 5px;
+			}
+		</style>
+		<script>
+			function changeFloat(event){
+				var floatValue = event.target.value;
+				var myElement = document.getElementByd('myElement');
+				myElement.style.float = floatValue;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>CSS float with inline Element</h1>
+		<input type="radio" name="my-radio" value="none" onclick="changeFloat(event)" checked/>None<br>
+		<input type="radio" name="my-radio" value="left" onclick="changeFloat(event)"/>Left<br>
+		<input type="radio" name="my-radio" value="right" onclick="changeFloat(event)"/>Right<br>
+		<hr/>
+		<div class="container">
+			<span id="myElement">
+				I am a Span element.
+				{width:180px; height:50px}
+			</span>
+			Apollo 11 was the spacelight that landed the first humans,
+			Americans <span>Neil Armstrong</span> and <span>Buzz Aldrin</span>on the Moon on July 20, 1969, at 20:2018 UTC.
+			<span>Armstrong</span> became the first to step onto the lunar surface 6 hours latter on July 21 at 02:56 UTC.
+			<span>Armstrong</span> spent about three and a half two and a half hours outside the spacecraft, <span>Aldin</span> slightly less; and together they collected 47.5 pounds(21,5kg) of lunar material for return to Earth....
+		</div>
+		
+	</body>
+</html>

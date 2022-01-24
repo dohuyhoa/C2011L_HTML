@@ -1,0 +1,11 @@
+.img-desc {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    bottom: 15px;
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(76, 175, 80, 0.3);
+    color: white;
+    font-size: 20px
+}

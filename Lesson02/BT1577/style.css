@@ -1,0 +1,53 @@
+.body {
+	background-color: #FFFFCC;
+}
+.h2 {
+	text-decoration: underline;
+}
+.navigation {
+	position: relative;
+	margin-left: 25%;
+	text-align: center;
+}
+.tablesectionOne {
+	table-layout: fixed;
+	text-align: center;
+	background-color: #FFFFDD;
+	position: relative;
+	margin-top: 7px;
+}
+.tablesectionTwo {
+	table-layout: fixed;
+	text-align: center;
+	background-color: #FFFFDD;
+	position: relative;
+	margin-top: 7px;
+}
+.tablesectionThree {
+	table-layout: fixed;
+	text-align: center;
+	background-color: #FFFFDD;
+	position: relative;
+	margin-top: 7px;
+}
+.tablesectionFour  {
+	table-layout: fixed;
+	text-align: center;
+	background-color: #FFFFDD;
+	position: relative;
+	margin-top: 7px;
+}
+.CAPTION {
+	background-color: rgb(255,185,115);
+	font-family: arial;
+	font-size: 1em;
+}
+.th {
+	border: solid thin #D0D0D0;
+	empty-cell:  show;
+}
+.td {
+	text-align: center;
+	border: solid thin #D0D0D0;
+	empty-cells: show;
+}

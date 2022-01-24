@@ -1,0 +1,32 @@
+/* unvisited link */
+a:link, .link {
+  color: red;
+  text-decoration: none;
+}
+/* visited link */
+a:visited, .visited {
+  color: green;
+  text-decoration: underline;
+}
+/* mouse over link */
+a:hover, .hover {
+  color: hotpink;
+  background: #CDFEAA;
+  border-bottom: 1px solid;
+  text-decoration: underline;
+} 
+/* focus link */
+a:focus, .focus {
+  color: blue;
+  font-weight: none;
+  border-bottom: 1px solid;
+  background: #BAE498;
+  text-decoration: underline;
+}
+/* selected link */
+a:active, .active {
+  color: darkblue;
+  font-weight: bold;
+  background: #265301;
+  text-decoration: underline;
+}
