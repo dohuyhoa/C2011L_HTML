@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elements of Form in HTML/CSS</title>
+</head>
+
+<body>
+    <!-- Thanh phan co ban cua form -->
+    <!-- php/laravel (java web, asp, nodejs, ...) -->
+    <form method="post">
+        <p>Nhap Ten: </p>
+        <!-- sinh ra chuoi tu 5 -> 50 ky tu -> gom cac ky tu a-zA-Z0-9  -->
+        <input required type="text" name="fullname" placeholder="Enter fullname" size="50" style="width: 450px" value="" minlength="5" maxlength="50" pattern="[a-zA-Z0-9 ]{5,50}">
+        <p>Email: </p>
+        <input required type="email" name="email_name" placeholder="Enter email" style="width: 450px;">
+        <p>Birthday: </p>
+        <input required type="date" name="birthday" placeholder="Enter birthday">
+        <p>Time: </p>
+        <input type="time" name="created_at" placeholder="Enter time">
+        <p>Age: </p>
+        <input type="number" name="age" placeholder="Enter age" step="1">
+        <p>Color: </p>
+        <input type="color" name="color_name" placeholder="Enter color">
+        <p>Phone Number: </p>
+        <input autofocus type="tel" name="phone_number" placeholder="Enter phone number">
+        <p>Gender: </p>
+        <select name="gender" style="width: 450px">
+		<option value="Nam">Male</option>
+		<option value="Nu">Female</option>
+		<option value="Khac">Other</option>
+	</select>
+        <p>Langugaes: </p>
+        <label><input type="checkbox"> C Programming</label>
+        <label><input type="checkbox"> HTML/CSS/JS</label>
+        <label><input type="checkbox"> AngularJS</label>
+        <p>Gender: </p>
+        <label><input type="radio" name="radio_gender"> Male</label>
+        <label><input type="radio" name="radio_gender"> Female</label>
+        <label><input type="radio" name="radio_gender"> Other</label>
+        <p>Country: </p>
+        <input type="text" name="country" placeholder="Enter country" list="countrylist">
+        <datalist id="countrylist">
+		<option value="Viet Name" />
+		<option value="Laos" />
+		<option value="Campuchia" />
+		<option value="Philipine" />
+		<option value="Japan" />
+	</datalist>
+        <p>Button: </p>
+        <input type="button" value="Button">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <p>Button: </p>
+        <button type="button">Button</button>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <iframe width="100%" height="1000" src="https://www.youtube.com/embed/tZ2P0b-UT_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+
+</html>
