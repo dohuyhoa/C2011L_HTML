@@ -1,0 +1,151 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container,
+.header,
+.main-content,
+.footer,
+.navbar,
+.menubar {
+    width: 100%;
+}
+
+.container {
+    width: 60%;
+    margin: 0px auto;
+    display: block;
+}
+
+.logo {
+    background-image: linear-gradient(to right, #c6f8f5, #35b4ae);
+    padding: 20px;
+}
+
+.header {
+    width: 100%;
+    display: block;
+}
+
+.logo h1 {
+    text-transform: uppercase;
+    color: #0c83bc;
+}
+
+.logo h3 {
+    color: #0739aa;
+}
+
+.navbar {
+    /* padding-bottom: 5px; */
+}
+
+.menubar {
+    width: 100%;
+}
+
+.menu {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    /* background-color: #25e773; */
+}
+
+.menu ul {
+    width: 70%;
+    margin: 0px;
+    list-style-type: none;
+    display: flex;
+    background-color: #25e773;
+}
+
+.menu ul li {
+    border-right: white 1px solid;
+    text-transform: uppercase;
+    color: white !important;
+    font-size: 15px;
+    /* margin-right: 10px; */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu ul li:hover {
+    background-color: rgb(226, 138, 22);
+}
+
+.search {
+    width: 30%;
+    background-color: orange;
+    padding-left: 15px;
+    padding-top: 7px;
+}
+
+.search input {
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.search button {
+    padding-top: 5px;
+    background-color: #25e773;
+    text-align: center;
+}
+
+.main {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    width: 70%;
+    text-align: justify;
+    padding-right: 25px;
+    box-shadow: 5px 0px 5px -5px black;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.main-right {
+    width: 30%;
+    padding-left: 15px;
+}
+
+.panel {
+    display: block;
+}
+
+.panel .panel-heading {
+    background-color: #25e773;
+    padding: 6px;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+
+.panel .panel-body {
+    list-style-type: none;
+}
+
+.panel .panel-body ul {
+    list-style-type: none;
+    ;
+}
+
+.panel .panel-body ul li {
+    border-bottom: 1px solid #81888d31;
+    font-size: 17px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+
+/* .footer {
+    height: 300px;
+    padding-bottom: 5px;
+    border: rgb(35, 128, 134) solid 2px;
+} */

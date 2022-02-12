@@ -1,0 +1,152 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container,
+.header,
+.main-content,
+.footer,
+.navbar,
+.menubar {
+    width: 100% !important;
+}
+
+.justify-content {
+    width: 70%;
+    margin: 0px auto;
+}
+
+.navbar img {
+    height: 70px;
+    float: left;
+}
+
+.navbar button {
+    background-color: transparent;
+    font-size: 18px;
+    border: solid #e3e3e3 2px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.navbar input {
+    background-color: #e5e5e5;
+    font-size: 18px;
+    border: solid #e3e3e3 2px;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.navbar label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 5px;
+    padding: 6px;
+    margin-right: 5px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.navbar a {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 5px;
+    padding: 6px;
+    margin-right: 5px;
+    padding-right: 20px;
+    cursor: pointer;
+    float: right;
+    text-decoration: none;
+    color: black;
+}
+
+.border-right {
+    border-right: solid #e3e3e3 2px;
+}
+
+.menubar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    color: white !important;
+    text-transform: uppercase;
+}
+
+.menubar ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menubar ul li:hover {
+    background-color: #801217;
+}
+
+.p40 {
+    text-align: center;
+    width: 40%;
+    padding: 20px;
+    float: left;
+}
+
+.p60 {
+    /*width: 60%;*/
+    float: left;
+    padding: 20px;
+}
+
+.border-left {
+    border-left: solid #e3e3e3 2px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.p50 {
+    width: 50%;
+}
+
+
+/* Tao khung thiet ke -> de nhin -> se xoa sau khi lam xong * START */
+
+.header {
+    /*height: 300px;*/
+    /*border: solid red 2px;*/
+    /*margin-bottom: 5px;*/
+}
+
+.navbar {
+    height: 70px;
+    /*border: solid green 2px;*/
+    /*margin-bottom: 5px;*/
+}
+
+.menubar {
+    /*height: 140px;*/
+    background-color: #a3161d;
+    /*border: solid black 2px;*/
+    margin-bottom: 5px;
+}
+
+.main-content {
+    /*height: 800px;*/
+    /*border: solid green 2px;*/
+    /*margin-bottom: 5px;*/
+}
+
+.footer {
+    /*height: 300px;*/
+    /*border: solid black 2px;*/
+}
+
+
+/* Tao khung thiet ke -> de nhin -> se xoa sau khi lam xong * END */

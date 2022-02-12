@@ -1,0 +1,140 @@
+                    body {
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                    
+                    .container,
+                    .header,
+                    .main-content,
+                    .footer {
+                        width: 100%;
+                        !important
+                    }
+                    
+                    .justify-content {
+                        width: 85%;
+                        margin: 0px auto;
+                    }
+                    
+                    .header {
+                        border: solid rgb(199, 58, 58) 2px;
+                    }
+                    
+                    .navbar {
+                        margin-bottom: 7px;
+                    }
+                    
+                    .navbar img {
+                        height: 70px;
+                        float: left;
+                    }
+                    
+                    .navbar button {
+                        background-color: transparent;
+                        font-size: 15px;
+                        border: solid #e3e3e3 2px;
+                        margin-top: 10px;
+                        margin-left: 5px;
+                        padding: 10px;
+                        margin-right: 10px;
+                    }
+                    
+                    .navbar label {
+                        cursor: pointer;
+                        margin-top: 10px;
+                        font-weight: bold;
+                        font-size: 11px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    
+                    .navbar input {
+                        background-color: #e5e5e5;
+                        font-size: 14px;
+                        border: solid #e3e3e3 2px;
+                        margin-top: 10px;
+                        margin-left: 5px;
+                        padding: 10px;
+                        margin-right: 5px;
+                        width: 220px;
+                    }
+                    
+                    .navbar a {
+                        text-decoration: none;
+                        font-size: 14px;
+                        margin-top: 15px;
+                        margin-left: 5px;
+                        padding: 10px;
+                        margin-right: 50px;
+                        float: right;
+                        padding-right: 30px;
+                        color: black;
+                    }
+                    
+                    .border-right {
+                        border-right: solid 1px #e3e3e3;
+                    }
+                    
+                    .menubar {
+                        margin-bottom: 5px;
+                        background-color: #e3161d;
+                    }
+                    
+                    .menubar ul {
+                        font-size: 12px;
+                        list-style-type: none;
+                        display: flex;
+                        margin: 0px;
+                        padding: 0px;
+                        color: white !important;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                    
+                    .menubar ul li {
+                        padding: 8px;
+                        padding-top: 15px;
+                        cursor: pointer;
+                    }
+                    
+                    .menubar ul li:hover {
+                        background-color: #d4272a;
+                    }
+                    
+                    .main-content {
+                        /* height: 300px;*/
+                        /*border: solid black 2px;*/
+                        /* margin-bottom: 5px;*/
+                    }
+                    
+                    .p50 {
+                        width: 50%;
+                    }
+                    
+                    .p40 {
+                        width: 40%;
+                        padding: 20px;
+                        float: left;
+                        text-align: center;
+                    }
+                    
+                    .p60 {
+                        width: 50%;
+                        padding: 20px;
+                        float: right;
+                        text-align: left;
+                    }
+                    
+                    .border-left {
+                        border-left: #5e565628 solid 2px;
+                    }
+                    
+                    .footer {
+                        width: 100%;
+                        background-color: rgba(136, 136, 107, 0.103);
+                    }
+                    
+                    .row {
+                        width: 100%;
+                        display: flex;
+                    }

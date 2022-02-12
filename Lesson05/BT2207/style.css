@@ -1,0 +1,172 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: block;
+    width: 100%;
+}
+
+.justify-content {
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+}
+
+.header {
+    width: 100%;
+    display: block;
+}
+
+.navbar {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    background-color: rgba(34, 153, 153, 0.521);
+}
+
+.logo {
+    display: flex
+}
+
+.logo img {
+    display: flex;
+    max-height: 70px;
+    padding: 20px;
+    padding-left: 45px;
+    padding-right: 40px;
+}
+
+.logo h1 {
+    padding-top: 15px;
+    padding-left: 35px;
+    padding-right: 25px;
+}
+
+.logo h2 {
+    padding-right: 15px;
+    padding-left: 20px;
+    color: white
+}
+
+.menubar {
+    background-color: rgb(56, 56, 243);
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.menubar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menubar ul li {
+    color: white;
+    padding: 10px
+}
+
+.menubar ul input {
+    margin-top: 6px;
+    margin-left: 15px;
+    padding: 5px;
+    height: 12px;
+    width: 270px;
+    background-color: whitesmoke;
+    float: right;
+}
+
+.menubar ul svg {
+    margin-left: 0px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.border-right {
+    border-right: solid 1px white;
+}
+
+.main {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+.p70 {
+    width: 70%;
+    display: block;
+}
+
+.justify-content-p70 {
+    width: 90%;
+    margin-top: 10px;
+}
+
+.p70 .justify-content-p70 .panel1 {
+    width: 509px;
+}
+
+.p30 {
+    width: 30%;
+    display: block;
+    float: right;
+}
+
+.panel2 {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+
+.p60 {
+    width: 60%;
+    display: block;
+}
+
+.p40 {
+    width: 40%;
+}
+
+.p40 h3 {
+    color: rgb(38, 160, 160);
+    text-align: justify;
+}
+
+.panel3 {
+    width: 100%;
+    border: 1px solid #666e66;
+    margin-top: 10px;
+}
+
+.panel3 h3 {
+    text-align: center;
+    color: red;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.panel3 ol {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.panel3 ol li {
+    padding-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.panel4 {
+    width: 100%;
+    border: 1px solid #666e662a;
+    margin-top: 10px;
+}
+
+.panel4 h4 {
+    color: red;
+    padding-left: 10px;
+}
