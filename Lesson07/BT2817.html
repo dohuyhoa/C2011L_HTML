@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT2817</title>
+</head>
+<!--Yêu cầu:
+
+    - Sinh ngẫu nhiên số nguyên N (Có giá trị từ 5 -> 10)
+
+    - Tạo mảng rỗng arr = []
+
+    - Nhập N phân tử cho mảng arr qua hàm prompt -> Yêu cầu mỗi lần nhập cần chèn phần tử đó vào mảng sao cho sau khi chèn mảng luôn sắp xếp theo thứ tự tăng dần
+
+    - Đếm số lần xuất hiện của từng phẩn tử trong mảng và hiển thị ra màn hình-->
+
+<body>
+    <script>
+        var N = Math.floor(Math.random() * 4) + 3;
+        document.write(`<h2>N = ${N}</h2>`)
+        var arr = [];
+        for (var i = 0; i < N; i++) {
+            arr[i] = prompt("Enter arr[ " + i + ']:')
+            arr.sort(function(a, b) {
+                return a - b
+            });
+            document.write(`<br><h3>Nhap gia tri lan thu ${i}</h3>`);
+            var index = 0;
+            for (var item of arr) {
+                document.write(`<br>arr[${index++}] = ${item}`)
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+</html>

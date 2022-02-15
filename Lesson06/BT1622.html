@@ -1,0 +1,94 @@
+<!-- 
+    ạo máy tính + - * / trong Javascript - Tạo máy tính căn bản cộng trừ nhân chia bằng Javascript 
+    - Sử dụng function trong Javascript Viết danh sách các hàm sau :
+     - hàm cộng, trừ, nhân, chia với 2 tham số đầu vào - 
+     Nhập 2 giá trị đầu vào a, b thông qua prompt và biểu thức tính toán +,-,*,/
+      - Tính kết quả và in ra màn hình. Chú ý: để nhập a thông qua hàm prompt chúng ta làm theo cách
+    sau a = prompt('Nhập giá trị a')
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <STYLE>
+        body {
+            width: 100%;
+            height: 800px;
+            display: flex;
+        }
+        
+        div {
+            text-align: center;
+            margin: auto;
+            width: 30%;
+            height: 40%;
+            background-color: #e3e3e3;
+            display: block;
+            justify-content: center;
+        }
+    </STYLE>
+</head>
+
+<body>
+    <div>
+        <h1>CALCULATOR</h1>
+        <Script>
+            var a = prompt('Nhap a:')
+            var b = prompt('Nhap b:')
+            var c = prompt('Nhap phep tinh:')
+
+            function sum(a, b) {
+                return a + b;
+            }
+
+            function sub(a, b) {
+                return a - b;
+            }
+
+            function mul(a, b) {
+                return a * b;
+            }
+
+            function div(a, b) {
+                return a / b;
+            }
+            switch (c) {
+                case '+':
+                    {
+                        document.write('a+b = ' + sum(a, b))
+                        break;
+                    }
+
+                case '-':
+                    {
+                        document.write('a-b = ' + sub(a, b))
+                        break;
+                    }
+                case '*':
+                    {
+                        document.write('a*b = ' + mul(a, b))
+                        break;
+                    }
+                case '/':
+                    {
+                        document.write('a/b = ' + div(a, b))
+                        break;
+                    }
+                default:
+                    {
+                        document.write('Ban nhap sai')
+                    }
+            }
+        </Script>
+
+    </div>
+
+</body>
+
+</html>
+
+</html>

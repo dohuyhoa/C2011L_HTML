@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Giải phương trình bậc 1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        body {
+            width: 100%;
+            margin: auto;
+            padding: 0px;
+            height: 600px;
+            display: flex;
+            position: relative;
+        }
+        
+        .container {
+            margin: auto;
+            justify-content: center;
+        }
+        
+        .Main {
+            width: 40%;
+            margin: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            position: absolute;
+            left: 400px;
+            top: 100px;
+        }
+        
+        .Top {
+            background-image: linear-gradient(0, rgba(56, 175, 223, 0.8), rgb(8, 99, 141));
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 5px 0;
+            color: rgb(212, 202, 202);
+        }
+        
+        .Bot {
+            padding: 5px 0;
+            border: #4cc2f157 solid 1px;
+        }
+        
+        .ButtonFUN {
+            padding: 15px 25px;
+            outline: none !important;
+            color: #fff;
+            background-color: #359ee8;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            margin: 10px 0;
+        }
+        
+        .ButtonFUN:hover {
+            background-color: #2578b3 !important;
+        }
+        
+        .ButtonFUN:active {
+            background-color: #359ee8;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        
+        .Button {
+            margin: 10px 0;
+        }
+        
+        .text {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Main">
+            <div class="Top">
+                <h4>
+                    Giải phương trình bậc 1
+                </h4>
+            </div>
+            <div class="Bot">
+                <div class="text">
+                    <span id="A">a</span>x+<span id="B">b</span>=0 (a≠0)
+                    <br>
+                    <span id="End"></span>
+                </div>
+                <div class="Button">
+                    <button class="ButtonFUN" type="button" onclick="CheckA()">Nhập A</button>
+                    <button class="ButtonFUN" type="button" onclick="EnterB()">Nhập B</button>
+                    <button class="ButtonFUN" type="button" style="background-color: green" onclick="Done()">Giải phương trình</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function CheckA() {
+            do {
+                a = prompt('Nhập giá trị a:');
+            } while (a == 0);
+            document.getElementById('A').innerHTML = a;
+        }
+
+        function EnterB() {
+            b = prompt('Nhập giá trị b');
+            document.getElementById('B').innerHTML = b;
+        }
+
+        function Done() {
+            var kq = -b / a;
+            document.getElementById('End').innerHTML =
+                'Phương trình có nghiệm:' + '<br>' + 'x = ' + kq
+        }
+    </script>
+</body>
+
+</html>

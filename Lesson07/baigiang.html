@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Object & Array in Javascript</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Object & Array in Javascript</h1>
+
+    <script type="text/javascript">
+        // Khai niem Object trong Javascript
+        // bai toan: bieu dien thong tin cua dong vat, xe co, sinh vien, ... => Bieu dien no nhu the nao
+        // Neu su dung khai bao thuong:
+        // Thong tin sinh vien
+        var fullname, age, address, email, rollno
+            // Thong tin dong vat
+        var animalName, animalAge, animalFoodType
+            // Thong tin xe co
+        var vehicleName, vehicleManufacturer, vehicleAge
+            // Bieu dien tren -> ve co ban ko van de gi -> Roi rac, quan ly thong tin se kho
+            // Co cach nao -> nhom lai thong tin khong
+            // Object trong javascript -> cung dc bieu dien nhu structre trong C (Da hoc roi) -> Lien tuong toi no de hon
+            // Object trong JS se duoc bieu dien nhu
+            // Khi noi Object trong JS -> de cap toi 1 doi tuong cu the
+            // Object -> Sinh vien: fullname -> Tran Van A, age -> 22, address -> Ha Noi, email -> tranvana@gmail.com, rollno -> R001
+            // Bieu dien no trong JS
+            // Cach 1: Bieu dien ngay tu dau
+        var std = {
+                'fullname': 'Tran Van A',
+                'age': 22,
+                'address': 'Ha Noi',
+                'email': 'tranvana@gmail.com',
+                'rollno': 'R001'
+            }
+            // Cach 2:
+        std = {} //Doi tuong empty -> chua co thong tin
+        std.fullname = 'Tran Van A'
+        std.age = 22
+        std.address = 'Ha Noi'
+        std.email = 'tranvana@gmail.com'
+        std.rollno = 'R001'
+
+        // Doc thong tin thuoc tin trong object
+        document.write(`Ten: ${std.fullname}, tuoi: ${std.age}<br/>`)
+
+        // Sua thong tin sinh vien
+        std.fullname = 'Tran Van B'
+        document.write(`Ten: ${std.fullname}, tuoi: ${std.age}<br/>`)
+
+        // Tim hieu mang trong Javascipt -> Ly thuyet nhu C
+        // Javascript -> luon khai bao mang dong -> tu dong mo rong so phan tu trong mang
+        // Khai bao 1 mang rong
+        // Luu y: mang trong JS -> quan ly nhieu kieu du lieu: int, float, char, String, Object, ... => Thong thuong quan ly cung kieu du lieu
+        var arr = [] //Cach hay su dung
+        arr = new Array()
+
+        // 1: Them phan tu vao trong mang
+        arr.push(1) //length: 1, index: 0 -> Tu dong mo rong so phan tu trong mang
+        arr.push(5) //length: 2, index: 0 -> 1 -> Tu dong mo rong so phan tu trong mang
+        arr.push(3) //length: 3, index: 0 -> 2 (0, 1, 2) -> Tu dong mo rong so phan tu trong mang
+
+        // 2: Doc du lieu trong mang
+        document.write('<h2>Danh sach cac phan tu trong mang -> C1</h2>')
+        document.write(`arr[0] = ${arr[0]}<br/>`)
+        document.write(`arr[1] = ${arr[1]}<br/>`)
+        document.write(`arr[2] = ${arr[2]}<br/>`)
+        document.write('<h2>Danh sach cac phan tu trong mang -> C2</h2>')
+            // Chu y: arr.length -> so phan tu trong mang
+        for (var i = 0; i < arr.length; i++) {
+            document.write(`arr[${i}] = ${arr[i]}<br/>`)
+        }
+
+        // 3: Sua thong tin du lieu trong mang
+        // Sua thong tin 1 phan tu trong mang -> xac dinh -> cần sửa phần tử nào ở vị trí index là bao nhiêu
+        // Giả sử: sửa thông tin index = 1 -> thay đổi già trị thành 15
+        arr[1] = 15 //Xong
+        document.write('<h2>Danh sach cac phan tu trong mang -> Sau khi sua thong tin</h2>')
+        for (var i = 0; i < arr.length; i++) {
+            document.write(`arr[${i}] = ${arr[i]}<br/>`)
+        }
+
+        // 4: Xoa phan tu trong mang
+        // Bai toán: xóa phần tử ở vị trí index = 1 -> xóa số 15 khỏi mảng
+        arr.splice(1, 1)
+        document.write('<h2>Danh sach cac phan tu trong mang -> Sau khi xoa phan tu index = 1</h2>')
+        for (var i = 0; i < arr.length; i++) {
+            document.write(`arr[${i}] = ${arr[i]}<br/>`)
+        }
+        //Them tiep
+        arr.push(4)
+        arr.push(5)
+        arr.push(6)
+        arr.push(7)
+        document.write('<h2>Danh sach cac phan tu trong mang -> Sau khi them du lieu</h2>')
+        for (var i = 0; i < arr.length; i++) {
+            document.write(`arr[${i}] = ${arr[i]}<br/>`)
+        }
+        // Gia su chay lenh nhu sau -> nghia la gi
+        arr.splice(2, 3) //Co nghia: xoa cac phan tu index = 2, 3, 4
+        document.write('<h2>Danh sach cac phan tu trong mang -> Sau khi xoa</h2>')
+        for (var i = 0; i < arr.length; i++) {
+            document.write(`arr[${i}] = ${arr[i]}<br/>`)
+        }
+
+        // 5: Chen 1 phan tu vao vi tri bat ky trong mang
+        // Bai toan: chen 2 phan tu 2, 5 vao giau index 1 & 2 -> dieu nay co nghia sau khi chen: 2 -> vi tri index = 2, 5 -> vi tri index = 3, 7 -> chuyen sang index = 4
+        arr.splice(2, 0, 2, 5)
+        document.write('<h2>Danh sach cac phan tu trong mang -> Sau khi insert</h2>')
+        for (var i = 0; i < arr.length; i++) {
+            document.write(`arr[${i}] = ${arr[i]}<br/>`)
+        }
+        arr.splice(2, 0, 25)
+        document.write('<h2>Danh sach cac phan tu trong mang -> Sau khi insert</h2>')
+        for (var i = 0; i < arr.length; i++) {
+            document.write(`arr[${i}] = ${arr[i]}<br/>`)
+        }
+
+        // Khai bao mang gom cac phan tu san ngay tu dau
+        // Khai bao mang so nguyen gom cac phan tu 1, 5, 2, 10, 15
+        var arr2 = [1, 5, 2, 10, 15]
+        var arr3 = new Array(1, 5, 2, 10, 15)
+
+        // Luu y: thay so nguyen -> thanh cac kieu du lieu khac: float, boolean, char, String, Object
+
+        // Tim hieu mang Object trong JS
+        // Khai bao mang sinh vien
+        var studentList = []
+
+        // C1: Them thong tin sinh vien vao trong mang: fullname -> A, age: 18
+        var std = {
+            'fullname': 'A',
+            'age': 18
+        }
+        studentList.push(std)
+            // C2: Them thong tin sinh vien vao trong mang -> nhanh: fullname -> B, age: 22
+        studentList.push({
+            'fullname': 'B',
+            'age': 22
+        })
+
+        // Duyet thong tin cac phan tu trong mang
+        for (var i = 0; i < studentList.length; i++) {
+            // document.write(`Ten: ${studentList[i].fullname}, tuoi: ${studentList[i].age}`)
+            std = studentList[i]
+            document.write(`Ten: ${std.fullname}, tuoi: ${std.age}<br/>`)
+        }
+
+        // Khai bao mang gom cac phan tu ngay tu dau
+        studentList = [{
+            'fullname': 'A',
+            'age': 18
+        }, {
+            'fullname': 'B',
+            'age': 22
+        }]
+        for (var i = 0; i < studentList.length; i++) {
+            // document.write(`Ten: ${studentList[i].fullname}, tuoi: ${studentList[i].age}`)
+            std = studentList[i]
+            document.write(`Ten: ${std.fullname}, tuoi: ${std.age}<br/>`)
+        }
+
+        // for trong array -> co 1 foreach ra hay dung -> vs array object -> ra hay su dung
+        var arr = [1, 6, 2, 10, 11]
+        for (var v of arr) {
+            document.write(`v = ${v}<br/>`)
+        }
+
+        for (var item of studentList) {
+            document.write(`Ten: ${item.fullname}, tuoi: ${item.age}<br/>`)
+        }
+
+        // Chen thong tin sinh vien: fullname -> C, age -> 25 vao vi tri index = 1
+        std = {
+            'fullname': 'C',
+            'age': 25
+        }
+        studentList.splice(1, 0, std)
+        document.write('<h2>Danh sach sinh vien -> sau khi insert</h2>')
+        for (var item of studentList) {
+            document.write(`Ten: ${item.fullname}, tuoi: ${item.age}<br/>`)
+        }
+        // Chen thong tin sinh vien: fullname -> D, age -> 28 vao vi tri index = 2 -> su dung cach nhanh thi lam the nao
+        studentList.splice(2, 0, {
+            'fullname': 'D',
+            'age': 28
+        })
+        document.write('<h2>Danh sach sinh vien -> sau khi insert</h2>')
+        for (var item of studentList) {
+            document.write(`Ten: ${item.fullname}, tuoi: ${item.age}<br/>`)
+        }
+
+        // TH: chen nhieu sinh vien vao trong mang: fullname -> E, age: 18 & fullname -> F, age: 22
+        var stdE = {
+            'fullname': 'E',
+            'age': 18
+        }
+        var stdF = {
+                'fullname': 'F',
+                'age': 22
+            }
+            // chen vao vi tri index = 1
+        studentList.splice(1, 0, stdE, stdF)
+
+        document.write('<h2>Danh sach sinh vien -> sau khi insert</h2>')
+        for (var item of studentList) {
+            document.write(`Ten: ${item.fullname}, tuoi: ${item.age}<br/>`)
+        }
+    </script>
+    <!-- Ung dung -->
+    <!-- Viet chuong trinh sinh ngau nhien N sinh vien (fullname, age) -> Hien thi thong tin ra table -->
+    <table border="1" cellpadding="5">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Full Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Voi kien thuc hien tai: xac dc vi tri no se dc hien thi -> code js tai do -->
+            <script type="text/javascript">
+                var studentList = []
+                    //Sinh ngay nhien N sinh vien (1 -> 11)
+                var N = Math.floor(Math.random() * 10) + 1
+
+                //Tao N sinh vien ngau nhieu
+                for (var i = 0; i <= N; i++) {
+                    studentList.push({
+                        fullname: 'Sinh Vien ' + i,
+                        age: i
+                    })
+                }
+
+                //Hien thi thong tin sinh vien ra bang
+                var index = 0
+                for (var item of studentList) {
+                    document.write(`<tr>
+                        <td>${++index}</td>
+                        <td>${item.fullname}</td>
+                        <td>${item.age}</td>
+                    </tr>`)
+                }
+            </script>
+        </tbody>
+    </table>
+</body>
+
+</html>

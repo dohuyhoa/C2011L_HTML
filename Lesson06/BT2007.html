@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Giải phương trình bậc 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        body {
+            width: 100%;
+            margin: auto;
+            padding: 0px;
+            height: 600px;
+            display: flex;
+            position: relative;
+        }
+        
+        .container {
+            margin: auto;
+            justify-content: center;
+        }
+        
+        .Main {
+            width: 60%;
+            margin: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            position: absolute;
+            left: 300px;
+            top: 100px;
+        }
+        
+        .Top {
+            background-image: linear-gradient(0, rgba(56, 175, 223, 0.8), rgba(8, 99, 141, 0.692));
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 5px 0;
+            color: rgb(137, 235, 230);
+        }
+        
+        .Bot {
+            padding: 5px 0;
+            border: #4cc2f157 solid 1px;
+        }
+        
+        .ButtonFUN {
+            padding: 15px 25px;
+            outline: none !important;
+            color: #fff;
+            background-color: #359ee8;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            margin: 10px 0;
+        }
+        
+        .ButtonFUN:hover {
+            background-color: #2578b3 !important;
+        }
+        
+        .ButtonFUN:active {
+            background-color: #359ee8;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        
+        .Button {
+            margin: 10px 0;
+        }
+        
+        .text {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .text__input input {
+            background-color: rgba(153, 153, 153, 0.247);
+        }
+        
+        .text__input input {
+            rgba(153, 153, 153, 0.247);
+            min-width: 150px;
+        }
+        
+        .text__input input select {
+            min-width: 150px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Main">
+            <div class="Top">
+                <h4>
+                    Simple Calcular
+                </h4>
+            </div>
+            <div class="Bot">
+                <div class="text">
+                    <div class="text__input">
+                        <input id="A" required type="number" placeholder="Enter Number a" onEnter="inPuta()">
+                        <select id="math" type="text" required onEnter="inMath()">
+                            <option value="+">
+                            <option value="-">
+                            <option value="*">
+                            <option value="/">
+                        </select>
+                        <input id="B" required type="number" placeholder="Enter Number b " onEnter="inPutb()"> = <span id="End ">?</span>
+
+                    </div>
+                </div>
+                <div class="Button ">
+                    <button class="ButtonFUN " type="button " style="background-color: rgb(18, 104, 175) " onclick="Done() ">Tính </button>
+                    <button class="ButtonFUN " type="reset ">Reset</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript ">
+        function EnterA() {
+            document.getElementById('A').value = prompt('Enter number a:');
+        }
+
+        function EnterB() {
+            document.getElementById('B').value = prompt('NEnter number b:');
+        }
+
+        function Cong() {
+            document.getElementById('math').value = '+';
+        }
+
+        function Tru() {
+            document.getElementById('math').value = '-';
+        }
+
+        function Nhan() {
+            document.getElementById('math').value = '*';
+        }
+
+        function Chia() {
+            document.getElementById('math').value = '/';
+        }
+
+        function Done() {
+            document.Caculator.Check.value += document.getElementById('A').value;
+            document.Caculator.Check.value += document.getElementById('math').value;
+            document.Caculator.Check.value += document.getElementById('B').value;
+            document.getElementById('End').innerHTML = eval(document.Caculator.Check.value);
+            document.Caculator.Check.value = '';
+        }
+
+        function Reset() {
+            document.Caculator.Check.value = '';
+            document.getElementById('End').innerHTML = '';
+        }
+    </script>
+</body>
+
+</html>

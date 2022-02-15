@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT2816</title>
+</head>
+
+<body>
+    <!--
+        Yêu cầu chương trình:
+
+        - Sinh ngẫu nhiên 1 số tự nhiên N (N có giá trị từ 3 -> 10)
+
+        - Nhập N sản phẩm thông qua hàm prompt (Thông tin sản phẩm gồm: link hình ảnh, tên sản phẩm, giá bán)
+
+        - Viết chương trình sắp xếp tên sản phẩm theo thứ tự A-Z
+
+        - Hiển thị danh sách sản phẩm ra màn hình 
+    -->
+    <script>
+        var N = Math.floor(Math.random() * 2) + 3;
+        document.write(`<h2>N = ${N}</h2>`);
+        var sanPham = [];
+        for (var i = 0; i < N; i++) {
+            sanPham.push({
+                'link': prompt(`Link hình ảnh của sản phẩm thứ ${i}:`),
+                'name': prompt(`Tên sản phẩm của sản phẩm thứ ${i}:`),
+                'gia': prompt(`Giá bán của sản phẩm thứ ${i}:`),
+            })
+        }
+        var index = 1;
+        for (var item of sanPham) {
+            document.write(`<br>Thông tin sản phẩm thứ ${index++}: <br> Link: ${item.link} <br> Name: ${item.name} <br> Giá bán: ${item.gia}`)
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: "Helvetica Neue";
+}
+
+body>div {
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 80px;
+    transition: opacity 0.2s ease;
+}
+
+.btn+.btn {
+    margin-left: 25px;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn--success {
+    background-color: rgb(16, 175, 16);
+}
+
+.btn--warning {
+    background-color: rgb(228, 209, 46);
+}
+
+.btn--danger {
+    background-color: rgb(218, 44, 39);
+}
+
+.btn--size--s {
+    padding: 8px 32px;
+}
+
+.btn--size--m {
+    padding: 12px 40px;
+}
+
+.btn--size--l {
+    padding: 16px 52px;
+}
+
+.btn--disabled {
+    opacity: 0.5 !important;
+    cursor: default;
+}

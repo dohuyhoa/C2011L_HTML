@@ -12,6 +12,7 @@ body {
     width: 60%;
     margin: 0px auto;
     display: flex;
+    justify-content: space-between;
 }
 
 .header {
@@ -21,63 +22,68 @@ body {
 
 .navbar {
     width: 100%;
-    margin: 0px auto;
+    margin: auto;
     display: flex;
     background-color: rgba(34, 153, 153, 0.521);
 }
 
 .logo {
-    display: flex
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 .logo img {
-    display: flex;
+    /* display: flex; */
     max-height: 70px;
     padding: 20px;
-    padding-left: 45px;
-    padding-right: 40px;
+    /* padding-left: 45px;
+    padding-right: 40px; */
 }
 
 .logo h1 {
     padding-top: 15px;
-    padding-left: 35px;
-    padding-right: 25px;
+    /* padding-left: 35px;
+    padding-right: 25px; */
 }
 
 .logo h2 {
-    padding-right: 15px;
-    padding-left: 20px;
+    /* padding-right: 15px;
+    padding-left: 20px; */
     color: white
 }
 
 .menubar {
     background-color: rgb(56, 56, 243);
-    display: flex;
+    /* display: flex; */
     padding: 0px;
     margin: 0px;
     margin-top: 5px;
+    justify-content: space-evenly;
 }
 
-.menubar ul {
+.menubar .justify-content ul {
     list-style-type: none;
     display: flex;
     margin: 0px;
     padding: 0px;
+    justify-content: space-around;
 }
 
-.menubar ul li {
+.menubar .justify-content ul li {
     color: white;
     padding: 10px
 }
 
-.menubar ul input {
+.menubar .justify-content ul input {
     margin-top: 6px;
     margin-left: 15px;
     padding: 5px;
     height: 12px;
-    width: 270px;
     background-color: whitesmoke;
-    float: right;
+    width: 270px;
+    padding-left: 20px;
 }
 
 .menubar ul svg {
@@ -98,37 +104,60 @@ body {
 
 .p70 {
     width: 70%;
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
 }
 
 .justify-content-p70 {
-    width: 90%;
     margin-top: 10px;
 }
 
 .p70 .justify-content-p70 .panel1 {
-    width: 509px;
+    display: flex;
+    flex-flow: row swap;
+}
+
+.p70 .justify-content-p70 .panel1 img {
+    display: block;
+    max-width: 560px;
+    width: auto;
+    height: auto;
+}
+
+.panel2 .p60 img {
+    display: block;
+    max-width: 350px;
+    width: auto;
+    height: auto;
 }
 
 .p30 {
     width: 30%;
-    display: block;
+    display: flex;
     float: right;
+    flex-flow: column wrap;
+    justify-content: space-around;
 }
 
 .panel2 {
     width: 100%;
     margin-top: 20px;
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-.p60 {
-    width: 60%;
+.panel2 .p60 {
+    flex: 2;
     display: block;
+    /* flex-basis: 60%; */
 }
 
-.p40 {
-    width: 40%;
+.panel2 .p40 {
+    flex: 1;
+    margin-right: 5px;
+    /* flex-basis: 30%; */
 }
 
 .p40 h3 {

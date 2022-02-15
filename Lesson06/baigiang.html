@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript tutorial</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        // Bat dau code js
+        // In ra man hinh dong du Hello World
+        document.write('Hello World!!!');
+        console.log('Test log')
+
+        // Khai bao bien
+        var x //x: khong xac dinh kieu du lieu cu the
+        x = 5 //x: la so nguyen
+
+        x = 'Sinh vien Aptech' //x: la string
+            //Suy ra -> x co kieu du lieu phu thuoc vao gia tri ma no chua.
+        var y = 10 //y: so nguyen
+        y = "LOP C2110L"
+
+        z = 100 //z: so nguyen
+
+        // Hien thi du lieu 1 bien ra man hinh
+        document.write(x)
+        document.write('<br/>x = ' + x)
+        document.write('<br/>x = ' + x + '<br/>y = ' + y)
+
+        document.write(`<br/>x = ${x}<br/>y = ${y}`)
+
+        // Toan tu
+        //x = x + 1 <=> x+=1 <=> x++ <=> ++x
+        x = 3
+        y = x++
+            z = ++x
+        document.write(`<br/>x = ${x}, y = ${y}, z = ${z}`)
+            //x = 5, y = 3, z = 5
+        t = x++ + ++x - y-- + z++ + 2
+            //t = 5(x=6) + (x=7)7 - 3(y=2) + 5(z=6) + 2 = 16
+            //x = 7, y = 2, z = 6
+        document.write(`<br/>x = ${x}, y = ${y}, z = ${z}, t = ${t}`)
+
+        //Mot so function mac dinh trong JS
+        // alert('Xin chao')
+        // var option = confirm('Ban co chac chan muon xoa bai hoc khoi lop hoc khong???')
+        // console.log(option)
+        // x = prompt('Nhap X')
+        // console.log(x)
+        // y = prompt('Nhap Y', 0)
+        // console.log(y)
+
+        // x = "123"
+        // x1 = parseInt(x)
+        // console.log(x1)
+
+        x = 12
+        y = 5
+        z = x + y
+        console.log('z = ' + z)
+
+        x = '12'
+        y = 5
+        z = x + y
+        console.log('z = ' + z)
+        z = x - y
+        console.log('z = ' + z)
+        z = x / y
+        console.log('z = ' + z)
+        z = x * y
+        console.log('z = ' + z)
+
+        z = parseInt(x) + parseInt(y)
+        console.log('z = ' + z)
+
+        // eval -> risk trong lap trinh -> bao mat -> danh cap thong tin
+        // bien 1 string -> dong lenh cua js
+        var line = 'Sinh vien Aptech' //String -> an toan
+        line = 'x=5;y=7;z=x+y;console.log(z)' //line -> chi la string
+        console.log(line)
+
+        eval(line) //bien "x=5;y=7;z=x+y;console.log(z)" => lenh: x=5;y=7;z=x+y;console.log(z)
+
+        console.log('test hash')
+            //Ket hop vs encrypt -> chen ma doc -> lap vien ko nhan ra dc
+        line = 'eD01O3k9Nzt6PXgreTtjb25zb2xlLmxvZyh6KQ==' //Ko hieu -> chi nghi no la 1 doan text thuong
+        eval(atob(line))
+
+        function showMenu() {
+            document.write('<br/>Vi du 1')
+            document.write('<br/>Vi du 2')
+            document.write('<br/>Vi du 3')
+        }
+        showMenu()
+
+        function tinhtong(x, y) {
+            z = x + y
+            document.write('<br/>z = ' + z)
+        }
+        tinhtong(3, 6)
+
+        function tinhtong2(x, y) {
+            z = x + y
+            return z
+        }
+        zz = tinhtong2(30, 6)
+        document.write('<br/>zz = ' + zz)
+    </script>
+</body>
+
+</html>

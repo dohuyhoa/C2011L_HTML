@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ve Tam Giac Bang Javascript</title>
+</head>
+<body>
+<script type="text/javascript">
+	var N = Math.floor(Math.random() * 50)
+	document.write(`<h2 style="text-align: center;">Ve Tam Giac Hinh Sao N = ${N}</h2>`)
+
+	for (var i = 0; i < N; i++) {
+		//Ve ra 1 dong
+		for (var j = 0; j < i; j++) {
+			document.write('*')
+		}
+		document.write('<br/>')
+	}
+</script>
+</body>
+</html>

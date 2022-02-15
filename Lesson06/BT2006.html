@@ -1,0 +1,110 @@
+<!-- 
+    Tìm số lớn nhất
+    Yêu cầu nhập vào 5 số thông quan prompt -> In ra màn hình số lớn nhất.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIND MAX NUMBER</title>
+    <STYLE>
+        body {
+            width: 100%;
+            height: 600px;
+            display: flex;
+        }
+        
+        div {
+            text-align: center;
+            margin: auto;
+            width: 30%;
+            height: 40%;
+            background-color: #e3e3e3;
+            display: block;
+            justify-content: center;
+        }
+        
+        h2 {
+            background-color: darkgray;
+            color: chocolate;
+            line-height: 1.5;
+        }
+    </STYLE>
+</head>
+
+<body>
+    <div>
+        <h1>FIND MAX NUMBER</h1>
+        <h2>
+            <Script>
+                var arr = [];
+                for (var i = 0; i < 5; i++) {
+                    arr[i] = prompt("Enter arr[ " + i + ']:')
+                }
+                document.write('<br/>' + arr[0])
+                document.write('<br/>' + arr[1])
+                document.write('<br/>' + arr[2])
+                document.write('<br/>' + arr[3])
+                document.write('<br/>' + arr[4])
+
+                arr.sort(function(a, b) {
+                    return b - a
+                })
+
+                var numbermax = arr[4]
+                document.write('<br/> Max number = ' + numbermax)
+            </Script>
+        </h2>
+
+    </div>
+
+</body>
+
+</html>
+
+</html>
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tim Max (Javascript)</title>
+</head>
+<body>
+<h1 style="text-align: center;">Tim Max</h1>
+<script type="text/javascript">
+	var a1, a2, a3, a4, a5, max
+	 // Nhap 5 so nguyen
+	 a1 = parseFloat(prompt('Nhap a1', 0))
+	 document.write(`a1 = ${a1}<br/>`)
+	 a2 = parseFloat(prompt('Nhap a2', 0))
+	 document.write(`a1 = ${a2}<br/>`)
+	 a3 = parseFloat(prompt('Nhap a3', 0))
+	 document.write(`a1 = ${a3}<br/>`)
+	 a4 = parseFloat(prompt('Nhap a4', 0))
+	 document.write(`a1 = ${a4}<br/>`)
+	 a5 = parseFloat(prompt('Nhap a5', 0))
+	 document.write(`a1 = ${a5}<br/>`)
+
+	 max = a1
+
+	 if(max < a2) {
+	 	max = a2
+	 }
+	 if(max < a3) {
+	 	max = a3
+	 }
+	 if(max < a4) {
+	 	max = a4
+	 }
+	 if(max < a5) {
+	 	max = a5
+	 }
+
+	 document.write(`Max: ${max}`)
+</script>
+</body>
+</html> -->
