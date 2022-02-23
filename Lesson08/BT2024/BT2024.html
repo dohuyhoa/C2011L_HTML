@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT2024</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.css"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box__header">
+            <h3>Loan Application Form</h3>
+        </div>
+        <form method="post">
+            <div class="box__body">
+                <div class="box__body__content">
+                    <div class="box__body__outline">
+                        Application's Personnal Information
+                    </div>
+                    <div>
+                        <div class="row">
+                            <label class="row__label">
+                        Full Name
+                        </label>
+                            <input class="row__input" required id="fullname" type="text" pattern="[\w\s]* [\w\s]*" title="Tên bắt buộc có khoảng trắng!">
+
+                        </div>
+                        <div class="row">
+                            <label class="row__label">
+                        Date of Birth (MM/dd/yyyy):
+                             </label>
+                            <input required class="row__input" id="dateofbirth" type="date">
+                        </div>
+                        <div class="row">
+                            <label class="row__label">
+                        Phone Number:
+                         </label>
+                            <input required class="row__input" id="phonenumber" type="tel" minlength="10">
+                        </div>
+                        <div class="row">
+                            <label class="row__label">
+                        Address:
+                         </label>
+                            <input class="row__input" id="address" type="text">
+                        </div>
+                        <div class="row">
+                            <label class="row__label">
+                        ZIP code:
+                        </label>
+                            <input required class="row__input" id="zipcode" type="number" pattern="[0-9]{3}-[0-9]{4}-[0-9]{3}">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="box__body">
+                <!--  <div class="box__body__outline">
+                <p>Application's Employment Information</p>
+            </div> -->
+
+                <div class="box__body__content">
+                    <div class="row">
+                        <label class="row__label">
+                        Current Employer:
+                    </label>
+                        <input required class="row__input" id="currentemployer" type="text" ;>
+                    </div>
+                    <div class="row">
+                        <label class="row__label">
+                        Date of Joining (MM/dd/yyyy):
+                    </label>
+                        <input required class="row__input" id="dateofjoining" type="date">
+                    </div>
+                    <div class="row">
+                        <label class="row__label">
+                        Phone Number:
+                    </label>
+                        <input required class="row__input" id="phonenumber2" type="tel" minlength="10">
+                    </div>
+                    <div class="row">
+                        <label class="row__label">
+                        Email ID:
+                    </label>
+                        <input required class="row__input" id="emaiid" type="email">
+                    </div>
+                    <div class="row">
+                        <label class="row__label">
+                        Fax:
+                    </label>
+                        <input required class="row__input" id="fax" type="number" pattern="[0-9]{3}-[0-9]{7}">
+                    </div>
+                    <div class="row">
+                        <label class="row__label">
+                        Designation:
+                    </label>
+                        <input required class="row__input" id="designation" type="number">
+                    </div>
+                    <div class="row">
+                        <label class="row__label">
+                        Annual Income($):
+                    </label>
+                        <input required class="row__input" id="annualincome" type="number">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="box__body">
+                <!--  <div class="box__body__outline">
+                <p>Loan Information</p>
+            </div> -->
+
+                <div class="box__body__content">
+                    <div class="row">
+                        <label class="row__label">
+                        Loan Type:
+                    </label>
+                        <select required name="LoanType" id="loantype" placeholder="--Seclect--">
+                        <option value="personalloan">Personal Loan</option>
+                        <option value="homeloan">Home Loan</option>
+                        <option value="vehicleloan">Vehicle Loan</option>
+                        <option value="businessloan">Business Loan</option>
+                        <option value="educationloan">Education Loan</option>
+                    </select>
+                    </div>
+
+                    <div class="row">
+                        <label class="row__label">
+                        Principal($):
+                    </label>
+                        <input required class="row__input" id="principal" type="number">
+                    </div>
+                    <div class="row">
+                        <label class="row__label">
+                        Period(Months):
+                    </label>
+                        <input required class="row__input" id=" period" type="number">
+                    </div>
+                    <div class="row">
+                        <label class="row__label">
+                        Interest(%):
+                         </label>
+                        <input required class="row__input" id="interest" type="number">
+                    </div>
+                    <div class="row">
+                        <label class="row__label"></label>
+                        <div class="btn">
+                            <button type="submit" id="submit">
+                                Submit
+                                </button>
+                            <button type="reset" id="reset">
+                            Reset
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+</body>
+
+</html>

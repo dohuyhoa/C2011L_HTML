@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý thông tin sinh viên bằng Javascript-Lập trình Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="content__header">
+                <p>Đăng ký tài khoản User</p>
+            </div>
+            <form method="post" onsubmit="return saveData()">
+                <div class="content__body">
+                    <label class="content__body__text">User Name:</label>
+                    <input required type="text" class="content__body__space" id="userName_id">
+                    <label class="content__body__text">Full Name:</label>
+                    <input required type="text" class="content__body__space" id="fullName_id">
+                    <label class="content__body__text">Email:</label>
+                    <input required type="email" class="content__body__space" id="email_id">
+                    <label class="content__body__text">Birthday:</label>
+                    <input type="date" class="content__body__space" id="birthday_id">
+                    <div class="btn">
+                        <button class="btn__save" type="submit">Save</button>
+                        <button class="btn__reset" type="reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="content">
+            <div class="content__header">
+                <p>Danh sách tài khoản User</p>
+            </div>
+            <div class="content__body">
+                <table class="table" border="1" colspan="0" cellspacing="0">
+                    <thead style="background-color: #d2d7dcb9;">
+                        <tr>
+                            <th>No</th>
+                            <th>User Name</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Birthday</th>
+                            <th width="100px"></th>
+                            <th width="100px"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="result"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+
+
+</html>

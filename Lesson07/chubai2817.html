@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tạo mảng số nguyên & đếm phần tử trong mảng</title>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        // Sinh ngay so tu nhien N = 5 -> 10
+        var N = Math.floor(Math.random() * 5) + 5
+
+        // Tao mang rong
+        var arr = []
+
+        // Nhap & Insert phan tu vao trong
+        for (var i = 0; i < N; i++) {
+            var v = parseFloat(prompt('Nhap phan tu thu ' + i + '/' + N, 0))
+                // Xac dinh dc vi tri can insert phan tu v vao trong mang -> luon la 1 mang da dc sap xep
+                // arr = [1, 5, 10, 16, 20]
+                // v = 7 -> Tim vi tri index v < arr[index] -> insert v vao vi tri index
+            var isFind = false
+            for (var j = 0; j < arr.length; j++) {
+                if (v <= arr[j]) {
+                    //j -> vi tri se insert vao trong mang arr
+                    arr.splice(j, 0, v)
+                    isFind = true
+                    break
+                }
+            }
+
+            if (!isFind) {
+                arr.push(v) //Chua tim dc vi tri phu hop -> insert vao cuoi mang
+            }
+        }
+
+        // Hien thi thong tin cac phan tu trong mang
+        for (var i = 0; i < arr.length; i++) {
+            document.write(`Phan tu arr[${i}] = ${arr[i]}<br/>`)
+        }
+
+        // C1: count = [1, 1, 1, 1, 1, ..., 1] -> don mang -> Ra ket qua mang count can tim -> Giai thuat C
+        // C2: arr -> sort theo thu tu tang dan -> arr = [1, 2, 2, 4, 5, 5, 6, 6, 6, 7, 9, 9, 10]
+        var count = 1
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] == arr[i - 1]) {
+                count++
+            } else {
+                //In thong tin cua phan tu truoc do -> thiet lap lai lan tim kiem tiep theo
+                document.write(`So lan xuat hien ${arr[i-1]} la ${count}<br/>`)
+                count = 1
+            }
+        }
+
+        document.write(`So lan xuat hien ${arr[i-1]} la ${count}<br/>`)
+    </script>
+</body>
+
+</html>

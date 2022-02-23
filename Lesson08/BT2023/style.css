@@ -1,0 +1,114 @@
+                                                                            * {
+                                                                                box-sizing: border-box;
+                                                                            }
+                                                                            
+                                                                            .container {
+                                                                                margin: 0px 30%;
+                                                                            }
+                                                                            
+                                                                            .boxfull {
+                                                                                width: 100%;
+                                                                                background-color: #dcf2e5;
+                                                                            }
+                                                                            
+                                                                            .box1 {
+                                                                                background-color: #cadceb;
+                                                                                color: #1b5389;
+                                                                                display: inline-block;
+                                                                                padding: 5px;
+                                                                                margin: 10px;
+                                                                            }
+                                                                            
+                                                                            h2 {
+                                                                                padding: 0px;
+                                                                                margin: 0px;
+                                                                                padding-left: 10px;
+                                                                            }
+                                                                            
+                                                                            .box2,
+                                                                            .box3 {
+                                                                                width: 90%;
+                                                                                margin: 15px 20px 10px 10px;
+                                                                                border: 1px solid rgba(127, 135, 150, 0.26);
+                                                                                border-radius: 5px;
+                                                                            }
+                                                                            
+                                                                            .box2 .box__header {
+                                                                                position: relative;
+                                                                                top: -10px;
+                                                                                color: rgb(15, 77, 170);
+                                                                                font-weight: bold;
+                                                                                margin-left: 10px;
+                                                                            }
+                                                                            
+                                                                            .box3 .box__header {
+                                                                                position: relative;
+                                                                                top: -8px;
+                                                                                color: rgb(15, 77, 170);
+                                                                                font-weight: bold;
+                                                                                margin-left: 10px;
+                                                                            }
+                                                                            
+                                                                            .box__body {
+                                                                                margin: 10px;
+                                                                                margin-top: 0px;
+                                                                                border: solid 1px rgb(8, 150, 175);
+                                                                            }
+                                                                            
+                                                                            .box__body__row {
+                                                                                display: flex;
+                                                                                width: 100%;
+                                                                                margin: 1px;
+                                                                            }
+                                                                            
+                                                                            .box__body__row--item1 {
+                                                                                border: solid 1px rgb(8, 150, 175);
+                                                                                background-color: #ecf1f3;
+                                                                                margin: 2px;
+                                                                                width: 40%;
+                                                                            }
+                                                                            
+                                                                            .box__body__row--item2 {
+                                                                                border: solid 1px rgb(8, 150, 175);
+                                                                                background-color: #ecf1f3;
+                                                                                margin: 2px;
+                                                                                width: 60%;
+                                                                            }
+                                                                            
+                                                                            .box__body__row--item2 input,
+                                                                            select {
+                                                                                width: 98%;
+                                                                                margin: 0px auto;
+                                                                            }
+                                                                            
+                                                                            .inputrow {
+                                                                                display: flex;
+                                                                            }
+                                                                            
+                                                                            .inputrow input {
+                                                                                margin: 2px;
+                                                                            }
+                                                                            
+                                                                            .box4 {
+                                                                                width: 100%;
+                                                                                background-color: #cadceb;
+                                                                                display: flex;
+                                                                                justify-content: space-evenly;
+                                                                            }
+                                                                            
+                                                                            .btn {
+                                                                                margin: 0px;
+                                                                                padding: 5px;
+                                                                            }
+                                                                            
+                                                                            .btn button {
+                                                                                min-width: 100px;
+                                                                                background-color: rgba(8, 82, 82, 0.384);
+                                                                                cursor: pointer;
+                                                                                margin-right: 20px;
+                                                                                margin-left: 20px;
+                                                                            }
+                                                                            
+                                                                            .btn button:hover {
+                                                                                background-color: rgba(8, 82, 82, 0.788);
+                                                                            }

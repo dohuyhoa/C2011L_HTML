@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Tutorial</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <form method="post" onsubmit="return saveData()">
+        <p>
+            <label>Fullname: </label>
+            <input required type="text" name="fullname" size="50" placeholder="Enter full name" maxlength="50" pattern="[a-z0-9A-Z ]{5,50}" id="fullname_form">
+        </p>
+        <p>
+            <label>Email: </label>
+            <input required type="email" name="email" size="50" placeholder="Enter email" id="email_form">
+        </p>
+        <p>
+            <label>Phone: </label>
+            <input required type="tel" name="phone_number" size="50" placeholder="Enter phone" pattern="[+]?[0-9]{9,15}" minlength="6" id="phone_number_form">
+        </p>
+        <p>
+            <label>Age: </label>
+            <input required type="number" name="age" size="50" placeholder="Enter age" min="0" max="100" id="age_form" step="1">
+        </p>
+        <button>Save</button>
+        <button type="button" onclick="readData()">Read</button>
+    </form>
+
+    <script type="text/javascript">
+        function saveData() {
+            fullname = document.getElementById('fullname_form').value
+            email = document.getElementById('email_form').value
+            phone_number = document.getElementById('phone_number_form').value
+            age = document.getElementById('age_form').value
+
+            document.write('<br>' + fullname)
+            document.write('<br>' + email)
+            document.write('<br>' + phone_number)
+            document.write('<br>' + age)
+
+            //save data => localstorage
+            localStorage.setItem('fullname_db', fullname)
+            localStorage.setItem('email_db', email)
+            localStorage.setItem('phone_number_db', phone_number)
+            localStorage.setItem('age_db', age)
+
+            return true;
+        }
+
+        function readData() {
+            fullname = localStorage.getItem('fullname_db')
+            email = localStorage.getItem('email_db')
+            phone_number = localStorage.getItem('phone_number_db')
+            age = localStorage.getItem('age_db')
+
+            console.log(fullname)
+            console.log(email)
+            console.log(phone_number)
+            console.log(age)
+
+            document.getElementById('fullname_form').value = fullname
+            document.getElementById('email_form').value = email
+            document.getElementById('phone_number_form').value = phone_number
+            document.getElementById('age_form').value = age
+        }
+
+        // readData()
+    </script>
+</body>
+
+</html>

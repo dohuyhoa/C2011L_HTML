@@ -1,0 +1,26 @@
+Nội dung kiến thức Javascript
+1) Kiến thức cơ bản (base)
+	- Khai bao biến
+	- Toán tử & biểu thức logic trong Javascript
+	- Mệnh đề điều kiện: if, else, switch
+	- Lặp: for, while, do .. while
+	- Function
+	- Object (Tương tự khái niệm structure trong C)
+	- Array:
+		- Mảng số nguyên, thực, String
+		- Object
+2) Kiến thức advanced javascript -> Web
+	- Events trong JS
+	- Mapping tag (html) <-> object javascript (mỗi 1 thành phần tag html -> 1 object biểu diễn js)
+	- Thay đổi thông tin (thuộc tính, css) của tag bằng javascript & input tags
+
+	- Đọc dữ liêu, thêm/sửa/xóa thành phần tag (html) trên trang web -> js
+	- Quản lý bộ nhớ
+		- localStorage
+	- Khái niệm JSON (string) -> chuyển json string -> object/array trong js
+							  -> chuyển object/array js -> json string
+	- Vận dụng JSON trong bài toán thực tế
+3) Ôn tập kiến thức
+	- Lập trình canvas
+	- Lập trình responsive
+	- Bootstrap/jQuery

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+
+    head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hiển thị thông tin sản phẩm - sử dụng prompt trong JS</title>
+
+</head>
+    
+        body>
+           <script type="text/javascript">
+        // Sinh so ngau nhien N: 3 -> 10
+               var N = Math.floor(Math.random() * 7) + 3
+        
+        // Khai bao 1 mang quan ly danh sach san pham
+               var productList = []
+            
+                  for (var i = 0; i < N; i++) {
+                      var thumbnail = prompt(`Nhap link san pham ${i}/${N}`)
+            var title = prompt(`Nhap tieu deu san pham ${i}/${N}`)
+                      var price = prompt(`Nhap gia ban san pham ${i}/${N}`)
+                
+                         productList.push({
+                             'thumbnail': thumbnail,
+                          'title': title,
+                       'price': price
+            })
+               }
+        
+                  // Viết chương trình sắp xếp tên sản phẩm theo thứ tự A-Z
+                  productList.sort(function(p1, p2) {
+                      // toLowerCase(): 'AbcD' -> 'abcd'
+                      // v1.localeCompare(v2) -> 1: v2 xep truoc v1, 0: v1 & v2 trung nhau, -1: v2 xep sau v1
+                      // Xep theo thu tu A-Z
+                      // return 1: Hoan doi vi tri p1 & p2
+                   // Nguoc lai return 0 | -1 -> khong thay doi vi tri cua p1 & p2 trong mang productList
+                return p1.title.toLowerCase().localeCompare(p2.title.toLowerCase())
+            })
+           </script>
+              <table border="1" cellpadding="5">
+                     <thead>
+                         <tr>
+                             <th>No</th>
+                             <th>Thumbnail</th>
+                          <th>Title</th>
+                       <th>Price</th>
+                   </tr>
+                    </thead>
+                       <tbody>
+                           <script type="text/javascript">
+                                // Hiển thị danh sách sản phẩm ra màn hình
+                                  var index = 0
+                for (var item of productList) {
+                    document.write(`<tr>
+				<td>${++index}</td>
+				<td><img src="${item.thumbnail}" width="100"/></td>
+				<td>${item.title}</td>
+                			<td>${item.price}</td>
+            			</tr>`)
+                       }
+                </script>
+       
+ </tbody>
+    </table>
+</body>
+
+</html>

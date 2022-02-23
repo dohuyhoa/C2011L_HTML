@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events & Binding HTML - Object JS</title>
+
+    <style type="text/css">
+        .container {
+            width: 600px;
+            padding: 10px;
+            margin: 0px auto;
+            background-color: orange;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            font-weight: bold;
+        }
+        
+        .form-control {
+            width: 98%;
+        }
+        
+        .btn-success {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+        
+        .btn-warning {
+            background-color: red;
+            color: black;
+            border: none;
+            padding: 10px;
+        }
+        
+        .btn-info {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <form method="post"> -->
+        <div class="form-group">
+            <label>Title: </label>
+            <!-- id: gia tri cua no duy nhat vs tat ca cac tags khac trong HTML -->
+            <input type="text" name="title_name" id="title_id" placeholder="Enter title" class="form-control" onchange="changeTitleContent()" style="font-size: 18px; color: red">
+            <!--
+				Phan tich:
+				JS -> input: se dc hieu nhu la 1 object trong JS
+				Binding -> Object JS -> obj = {
+					"type": "text",
+					"name": "title_name",
+					"id": "title_id",
+					"placeholder": "Enter title",
+					"class": "form-control",
+					"onchange": "changeTitleContent()",
+					"style": {
+						"fontSize": "18px",
+						"color": "red"
+					}
+				}
+				sua thuoc tinh gia tri obj -> vi du: placeholder -> "Vao tieu de"
+				... sua moi thuoc tinh & thong tin cua the do trong html bang js
+
+				-> Ap dung vs tat cac tags trong HTML
+			-->
+        </div>
+        <div class="form-group">
+            <label>Category: </label>
+            <select name="category_name" id="category_id" class="form-control" onchange="changeCategoryContent()">
+				<option value="">-- Select --</option>
+				<option value="v-apple">Apple</option>
+				<option value="v-google">Google</option>
+				<option value="v-samsung">Samsung</option>
+			</select>
+        </div>
+        <div class="form-group">
+            <label>Price: </label>
+            <input type="number" name="price_name" id="price_id" placeholder="Enter price" class="form-control">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-success" onclick="clickSaveProduct()">Save Product</button>
+            <button type="reset" class="btn-warning" onclick="clickReset()">Reset</button>
+            <button type="button" class="btn-info" onclick="clickTest()">Test</button>
+            <button type="button" class="btn-info" onclick="doBindingTitleTag()">Binding Title Tag</button>
+            <button type="button" class="btn-info" onclick="doBindingCategoryTag()">Binding Select Tag</button>
+            <button type="button" class="btn-warning" onclick="doBindingOtherTag()" style="margin-top: 15px;">Test Khong Phai Input/Select Tag</button>
+        </div>
+        <p id="test_id">Noi dung add vao giau the nay (noi dung text hay doan html)</p>
+        <!-- </form> -->
+    </div>
+
+    <script type="text/javascript">
+        function clickSaveProduct() {
+            console.log('click save product ...')
+        }
+
+        function clickReset() {
+            console.log('click reset ...')
+        }
+
+        function clickTest() {
+            console.log('click test ...')
+        }
+
+        function changeTitleContent() {
+            console.log('change title content ...')
+        }
+
+        function changeCategoryContent() {
+            console.log('change category content ...')
+        }
+
+        function doBindingTitleTag() {
+            // Lam the nao get object title trong html
+            var obj = document.getElementById('title_id') //Lay doi tuong ra JS -> DONE
+
+            // Sua thong tin thuoc tinh tag bang js -> CSS
+            obj.placeholder = 'Vao tieu de'
+            obj.style.color = 'blue'
+            obj.style.fontSize = '30px'
+            obj.style.backgroundColor = 'yellow'
+
+            // Co thuoc tinh -> su dung trong js rat nhieu -> input: value
+            console.log(obj.value)
+        }
+
+        function doBindingCategoryTag() {
+            var categoryTag = document.getElementById('category_id')
+
+            // Tim hieu ve thuoc tinh value trong select
+            console.log(categoryTag.value)
+        }
+
+        function doBindingOtherTag() {
+            var testTag = document.getElementById('test_id')
+
+            // testTag.innerHTML = '<h1 style="color: white">Xin chao ...</h1>'
+            testTag.innerHTML += '<h1 style="color: white">Xin chao ...</h1>'
+        }
+    </script>
+</body>
+
+</html>

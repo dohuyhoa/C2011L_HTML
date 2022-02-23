@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quan ly san pham - page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel">
+            <div class="panel-heading">
+                Input Product's Detail Information
+            </div>
+            <div class="panel-body">
+                <form method="post" id="MyForm">
+                    <label>Product Name: </label>
+                    <input type="text" id="product_name">
+
+                    <label>Manufacturer Name: </label>
+                    <select id="manufacturer_name" onchange="changeManufacturerName()">
+						<option value="">-- Select --</option>
+					</select>
+
+                    <label>Category Name: </label>
+                    <select id="category_name">
+						<option value="">-- Select --</option>
+					</select>
+
+                    <label>Price: </label>
+                    <input type="number" id="price" onkeyup="updateTotalPrice()">
+
+                    <label>Quantity: </label>
+                    <input type="number" id="quantity" onkeyup="updateTotalPrice()">
+
+                    <label>Total Price: </label>
+                    <input type="number" id="total_price" disabled="true">
+
+                    <div class="form-group">
+                        <button type="button" onclick="addProduct()" style="margin-left: 0px !important;" id="save_btn">Add Product</button>
+                        <button type="reset" id="reset_btn">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading">
+                Product List Management
+            </div>
+            <div class="panel-body">
+                <table border="1" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Manufacturer Name</th>
+                            <th>Category Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="result">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- code js -->
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.container {
+    width: 700px;
+    margin: 0px auto;
+    border: solid #337ab7 2px;
+}
+
+.card-header {
+    background-color: #337ab7;
+    padding: 8px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    width: 96%;
+    margin: 0px;
+    font-size: 16px;
+}
+
+.btn {
+    border: none;
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-success {
+    background-color: #5cb85c;
+}
+
+.btn-success:hover {
+    background-color: #72da72;
+}
+
+.btn-warning {
+    background-color: #f1ad4d;
+}
+
+.btn-warning:hover {
+    background-color: #f8b658;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+}
+
+.btn-danger:hover {
+    background-color: #f06f6b;
+}
+
+table {
+    width: 100%;
+}
+
+table th,
+table td {
+    border: solid #e3e4e6 1px;
+}

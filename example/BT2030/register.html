@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./main.js"></script>
+</head>
+<!--1. Tạo ra 1 trang web đặt tên là : 
+        - register.html gồm các input (tên, tuổi, email) và button đăng ký
+        - Khi ngươi dùng click vào button đăng ký thì lưu toàn bộ thông tin vào LocalStorage
+    2. Tạo ra 1 trang web mới là : show.html -> Lấy thông tin luu trong LocalStorage và hiển thị ra màn hình-->
+
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="justify">
+                <form method="post" onsubmit="return registerNewUser();">
+                    <div class="justify__row">
+
+                        <label class="justify__row__label">
+                            Full Name: <span style="color: red;">*</span>
+                        </label>
+                        <input class="justify__row__input" name="fullname" id="fullname" type="text" placeholder="Enter Full name" required="true" pattern="[a-zA-Z0-9 ]{6,15}">
+                    </div>
+
+                    <div class="justify__row">
+                        <label class="justify__row__label">
+                            Email: <span style="color: red; ">*</span>
+                        </label>
+                        <input class="justify__row__input" name="email" id="email" type="email" placeholder="Enter your email" required="true">
+                    </div>
+
+                    <div class="justify__row">
+                        <label class="justify__row__label">
+                            Password: <span style="color: red; ">*</span>
+                        </label>
+                        <input class="justify__row__input" name="pwd" id=" password " type="password" minlength="6 " placeholder="Enter New Password" required="true ">
+                    </div>
+
+                    <div class="justify__row ">
+                        <label class="justify__row__label ">
+                            Confirmation Password: <span style="color: red; ">*</span>
+                        </label>
+                        <input class="justify__row__input " name="pwd:-confirm" id=" password-confirm" type="password " minlength="6 " placeholder="Enter Confirmation Password " required="true ">
+                    </div>
+
+                    <div class=" justify__row ">
+                        <label class="justify__row__label ">
+                            Birth: <span style="color: red; ">*</span>
+                        </label>
+                        <input class="justify__row__input " id="birth " type="date " placeholder="dd/mm/yyy " required="true ">
+                    </div>
+                    <div class="justify__row__input ">
+                        <label class="justify__row__input--label "></label>
+                        <div class="justify__row__input--button ">
+                            <button type="submit ">Register </button>
+                            <button type="reset ">Reset </button>
+
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form Payment</title>
+
+    <style type="text/css">
+        .container {
+            width: 600px;
+            margin: 0px auto;
+            background-color: #69e7f0;
+            padding: 10px;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 6px;
+            width: 100%;
+            display: flex;
+            font-size: 16px;
+        }
+        
+        .form-group label {
+            width: 160px;
+            float: left;
+        }
+        
+        .form-group input {
+            float: left;
+            width: 80px;
+            margin-right: 8px;
+        }
+        
+        .form-group select {
+            width: 350px;
+        }
+        
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post">
+            <h2>Purchase Order Form</h2>
+            <h4>Product Information</h4>
+            <div class="form-group">
+                <label>Product</label>
+                <select required class="form-control" id="product_id" onchange="selectProduct()">
+				<option value="0">Select</option>
+				<option value="650">Comfort Sleeper</option>
+				<option value="975">Morgan Kids Bed</option>
+				<option value="480">Entertainment Cabinet</option>
+			</select>
+            </div>
+            <div class="form-group">
+                <label>Unit Price ($)</label>
+                <input type="number" id="unit_price_id" class="form-control" value="0" disabled>
+            </div>
+            <div class="form-group">
+                <label>Quantity</label>
+                <input required type="number" id="quanlity_id" class="form-control" value="0" disabled onkeyup="calTotalPrice()">
+            </div>
+            <div class="form-group">
+                <label>Total Price ($)</label>
+                <input type="number" id="total_price_id" class="form-control" value="0" disabled>
+            </div>
+
+            <h4>Shipping Information</h4>
+            <div class="form-group">
+                <label>Full Name</label>
+                <!-- Yeu cau: fullname = a-zA-Z + space = 5 - 50 = Bat buoc phai co ky tu dau cach-->
+                <input required type="text" id="fullname_id" pattern="[a-zA-Z ]*[ ]+[a-zA-Z ]*" minlength="5" maxlength="30" class="form-control" style="width: 350px !important;">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <!-- Yeu cau: xxx-xxx-xxx -->
+                <input required type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" maxlength="11" id="phone_number_id" class="form-control" style="width: 350px !important;">
+            </div>
+            <div class="form-group">
+                <label>Shipping Address</label>
+                <input required type="text" id="shipping_address_id" class="form-control" style="width: 350px !important;">
+            </div>
+            <div class="form-group">
+                <label>Credit Card</label>
+                <select required class="form-control" id="credit_card_id" onchange="updateCreditCard()">
+				<option value="">Select</option>
+				<option value="650">Visa</option>
+				<option value="975">Master Card</option>
+				<option value="480">American Express</option>
+			</select>
+            </div>
+            <div class="form-group">
+                <label>Credit Card Number</label>
+                <input required type="text" id="number_1" pattern="[0-9]{4}" maxlength="4" class="form-control" disabled>
+                <input required type="text" id="number_2" pattern="[0-9]{4}" maxlength="4" class="form-control" disabled>
+                <input required type="text" id="number_3" pattern="[0-9]{4}" maxlength="4" class="form-control" disabled>
+                <input required type="text" id="number_4" pattern="[0-9]{4}" maxlength="4" class="form-control" disabled>
+            </div>
+            <div class="form-group" style="text-align: center; justify-content: center;">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function selectProduct() {
+            var quantityTag = document.getElementById('quanlity_id')
+            var unitPriceTag = document.getElementById('unit_price_id')
+
+            var productPrice = document.getElementById('product_id').value
+            if (productPrice > 0) {
+                quantityTag.disabled = false
+            } else {
+                quantityTag.disabled = true
+            }
+            unitPriceTag.value = productPrice
+        }
+
+        function calTotalPrice() {
+            var quantityTag = document.getElementById('quanlity_id')
+            var unitPriceTag = document.getElementById('unit_price_id')
+            var totalPriceTag = document.getElementById('total_price_id')
+
+            totalPriceTag.value = quantityTag.value * unitPriceTag.value
+        }
+
+        function updateCreditCard() {
+            var creditCardTag = document.getElementById('credit_card_id')
+            var numberTag1 = document.getElementById('number_1')
+            var numberTag2 = document.getElementById('number_2')
+            var numberTag3 = document.getElementById('number_3')
+            var numberTag4 = document.getElementById('number_4')
+
+            if (creditCardTag.value != '') {
+                numberTag1.disabled = false
+                numberTag2.disabled = false
+                numberTag3.disabled = false
+                numberTag4.disabled = false
+            } else {
+                numberTag1.disabled = true
+                numberTag2.disabled = true
+                numberTag3.disabled = true
+                numberTag4.disabled = true
+            }
+        }
+    </script>
+</body>
+
+</html>

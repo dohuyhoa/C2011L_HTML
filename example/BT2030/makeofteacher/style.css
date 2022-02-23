@@ -1,0 +1,35 @@
+.container {
+    width: 480px;
+    background-color: #7dd1e8;
+    margin: 0px auto;
+    padding: 10px;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    width: 40%;
+    float: left;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.form-group input {
+    width: 60%;
+    float: left;
+}
+
+.form-group button {
+    width: 30%;
+    margin-left: 0px;
+    background-color: orange;
+    border: none;
+    padding: 8px;
+}
+
+.btn-reset {
+    background-color: #e34516 !important;
+}

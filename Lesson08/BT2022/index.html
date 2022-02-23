@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quan ly san pham - Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload="init()">
+    <div class="container">
+        <div class="panel">
+            <div class="heading">
+                Input product's detail information
+            </div>
+            <div class="body">
+                <form method="post" onsubmit="return addProduct();">
+                    <div class="form-control">
+                        <label>Product Name: </label>
+                        <input required type="text" name="product_name" id="product_id">
+                    </div>
+
+                    <div class="form-control">
+                        <label>Manufacturer Name: </label>
+                        <select required name="manufacturer_name" id="manufacturer_id" onchange="changeManufacturer()">
+							<option value="">-- Select --</option>
+						</select>
+                    </div>
+
+                    <div class="form-control">
+                        <label>Category Name: </label>
+                        <select required name="category_name" id="category_id">
+							<option value="">-- Select --</option>
+						</select>
+                    </div>
+
+                    <div class="form-control">
+                        <label>Price: </label>
+                        <input required type="number" name="price" id="price_id" onchange="updatePrice()">
+                    </div>
+
+                    <div class="form-control">
+                        <label>Quantity: </label>
+                        <input required type="number" name="quantity" id="quantity_id" onchange="updatePrice()">
+                    </div>
+
+                    <div class="form-control">
+                        <label>Total Price: </label>
+                        <input type="number" name="total_price" id="total_price_id" disabled="true">
+                    </div>
+
+                    <div class="form-control">
+                        <button type="submit" class="btn-success">Add Product</button>
+                        <button type="reset" class="btn-reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="form-control">
+            <input type="text" name="search" id="s" placeholder="Search by name" onchange="filter()">
+        </div>
+        <div class="panel">
+            <div class="heading">
+                Product List Management
+            </div>
+            <div class="body">
+                <table class="table" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Manufacturer Name</th>
+                            <th>Category Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="result"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var storeList = [{
+            "name": "Apple",
+            "categories": ["IPhone", "IPad", "IPod"]
+        }, {
+            "name": "Samsung",
+            "categories": ["S1", "S2", "S3"]
+        }, {
+            "name": "LG",
+            "categories": ["L1", "L2", "L3", "L4", "L5"]
+        }, {
+            "name": "Google",
+            "categories": ["G1", "G2", "G3"]
+        }, ]
+        var productList = []
+
+        var manufacturerTag, categoryTag, productTag, priceTag, quantityTag, totalPriceTag
+        var resultTag
+
+        function init() {
+            categoryTag = document.getElementById('category_id')
+            productTag = document.getElementById('product_id')
+            priceTag = document.getElementById('price_id')
+            quantityTag = document.getElementById('quantity_id')
+            totalPriceTag = document.getElementById('total_price_id')
+            manufacturerTag = document.getElementById('manufacturer_id')
+            resultTag = document.getElementById('result')
+
+            for (var item of storeList) {
+                manufacturerTag.innerHTML += `<option value="${item.name}">${item.name}</option>`
+            }
+
+            console.log("testing...")
+
+            json = localStorage.getItem('dataList')
+
+            if (json != null && json != '') {
+                productList = JSON.parse(json)
+                displayProducts()
+            }
+        }
+
+        function changeManufacturer() {
+            manufacturerValue = manufacturerTag.value
+            categoryList = []
+
+            for (var item of storeList) {
+                if (item.name == manufacturerValue) {
+                    categoryList = item.categories
+                    break
+                }
+            }
+
+            categoryTag.innerHTML = '<option value="">-- Select --</option>'
+            for (var v of categoryList) {
+                categoryTag.innerHTML += `<option value="${v}">${v}</option>`
+            }
+        }
+
+        function updatePrice() {
+            price = priceTag.value
+            quantity = quantityTag.value
+
+            totalPriceTag.value = price * quantity
+        }
+
+        function addProduct() {
+            item = {
+                    'name': productTag.value,
+                    'manufacturer': manufacturerTag.value,
+                    'category_name': categoryTag.value,
+                    'price': priceTag.value,
+                    'quantity': quantityTag.value,
+                    'total_price': totalPriceTag.value
+                }
+                // console.log(item)
+            if (currentIndex >= 0) {
+                productList[currentIndex] = item
+                currentIndex = -1
+            } else {
+                productList.push(item)
+            }
+
+            // console.log(productList)
+            displayProducts()
+
+            // resultTag.innerHTML += `<tr>
+            // 		<th>${productList.length}</th>
+            // 		<th>${item.name}</th>
+            // 		<th>${item.manufacturer}</th>
+            // 		<th>${item.category_name}</th>
+            // 		<th>${item.price}</th>
+            // 		<th>${item.quantity}</th>
+            // 		<th><button>Edit</button></th>
+            // 		<th><button>Delete</button></th>
+            // 	</tr>`
+
+            saveData()
+
+            return false;
+        }
+
+        function saveData() {
+            //B1. Chuyen productList -> JSON (string)
+            json = JSON.stringify(productList)
+            console.log(json)
+
+            localStorage.setItem('dataList', json)
+        }
+
+        function displayProducts() {
+            resultTag.innerHTML = ''
+            index = 0
+            for (var item of productList) {
+                resultTag.innerHTML += `<tr>
+					<th>${index + 1}</th>
+					<th>${item.name}</th>
+					<th>${item.manufacturer}</th>
+					<th>${item.category_name}</th>
+					<th>${item.price}</th>
+					<th>${item.quantity}</th>
+					<th><button onclick="updateItem(${index})">Edit</button></th>
+					<th><button onclick="deleteItem(${index})">Delete</button></th>
+				</tr>`
+                index++
+            }
+        }
+
+        function filter() {
+            s = document.getElementById('s').value
+            resultTag.innerHTML = ''
+            index = 0
+            for (var item of productList) {
+                if (!item.name.includes(s)) {
+                    continue
+                }
+
+                resultTag.innerHTML += `<tr>
+					<th>${index + 1}</th>
+					<th>${item.name}</th>
+					<th>${item.manufacturer}</th>
+					<th>${item.category_name}</th>
+					<th>${item.price}</th>
+					<th>${item.quantity}</th>
+					<th><button onclick="updateItem(${index})">Edit</button></th>
+					<th><button onclick="deleteItem(${index})">Delete</button></th>
+				</tr>`
+                index++
+            }
+        }
+
+        var currentIndex = -1
+
+        function updateItem(index) {
+            currentIndex = index
+
+            item = productList[index]
+
+            manufacturerTag.value = item.manufacturer
+            categoryTag.value = item.category_name
+            productTag.value = item.name
+            priceTag.value = item.price
+            quantityTag.value = item.quantity
+            totalPriceTag.value = item.price * item.quantity
+        }
+
+        function deleteItem(index) {
+            productList.splice(index, 1)
+
+            displayProducts()
+
+            saveData()
+        }
+    </script>
+</body>
+
+</html>

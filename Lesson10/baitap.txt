@@ -1,0 +1,5 @@
+ai Test: 60 phut
+https://gokisoft.com/examination-bai-thi-thuc-hanh-htmlcssjs.html
+BT sau Test
+https://gokisoft.com/bai-tap-quan-ly-dang-ky-dang-nhap-localstorage-lap-trinh-javascript.html
+https://gokisoft.com/quan-ly-thong-tin-sinh-vien-bang-javascript-lap-trinh-javascript.html

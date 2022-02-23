@@ -1,0 +1,70 @@
+.container {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.login {
+    width: 45%;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #7dd1e8;
+    display: flex;
+    flex-direction: column;
+}
+
+.justify {
+    padding: 20px;
+    justify-content: center;
+}
+
+.justify__row {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.justify__row__label {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.justify__row__input {
+    flex: 2;
+}
+
+.justify__row__input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.justify__row__input--label {
+    flex: 1
+}
+
+.justify__row__input--button {
+    padding: 0px;
+    border: 0px;
+    text-align: center;
+    text-decoration-color: azure;
+    flex: 2;
+    flex-flow: row swap;
+    justify-items: center;
+    justify-content: space-evenly;
+    margin: 0px;
+    display: flex;
+}
+
+.justify__row__input--button button {
+    background-color: rgb(223, 154, 71);
+    min-width: 90px;
+    display: block;
+    height: 35px;
+    border: 0px;
+    cursor: pointer;
+}
+
+justify__row__input--button:hover {
+    background-color: aqua;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form_group">
+            <div class="header">
+                <h3>Input Product's Detail Inion</h3>
+            </div>
+            <form method="post">
+
+                <div class="row">
+                    <div class="row__item1">
+                        <label></label>Product Name</div>
+                    <div class="row__item2">
+                        <input type="text" id="productName_id">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="row__item1">Manufacturer Name</div>
+                    <div class="row__item2">
+                        <select id="manufacturer_name" onchange="changeManufacturerName()">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row__item1">
+                        <label>Category Name</label>
+                    </div>
+                    <div class="row__item2">
+                        <select name="category" id="categoryname_id"></select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row__item1">
+                        <label>Price</label>
+                    </div>
+                    <div class="row__item2">
+                        <input type="number" id="price" onkeyup="updateTotalPrice()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row__item1">
+                        <label id="quantity_id">Quantity</label>
+                    </div>
+                    <div class="row__item2">
+                        <input type="number" id="quantity" onkeyup="updateTotalPrice()">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row__item1">
+                        <label>Total Price</label>
+                    </div>
+                    <div class="row__item2">
+                        <input type="number" id="total_price" disabled="true">
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="btn ">
+                        <button type="button" onclick="addProduct()" style="margin-left: 0px !important;" id="save_btn">Add Product</button>
+                        <button type="reset" id="reset_btn">Reset</button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="form_group">
+            <div class="header">
+                <h3>Management Products</h3>
+            </div>
+            <div class="table">
+                <table border="1" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Manufacturer Name</th>
+                            <th>Category Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="result">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>

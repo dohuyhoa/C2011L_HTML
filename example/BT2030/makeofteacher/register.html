@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register Form - Page</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="register.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" onsubmit="return registerNewUser();">
+            <div class="form-group">
+                <label>Full Name: <font color="red">*</font></label>
+                <input required="true" type="text" name="fullname" id="fname" class="form-control" placeholder="Enter full name" pattern="[a-zA-Z0-9 ]{6,}">
+            </div>
+            <div class="form-group">
+                <label>Email: <font color="red">*</font></label>
+                <input required="true" type="email" name="email" id="email" class="form-control" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label>Password: <font color="red">*</font></label>
+                <input required="true" type="password" name="pwd" id="password" class="form-control" placeholder="Enter pwd" minlength="6">
+            </div>
+            <div class="form-group">
+                <label>Confirmation Password: <font color="red">*</font></label>
+                <input required="true" type="password" name="pwd-confirm" id="password-confirmation" class="form-control" placeholder="Enter Confirmation Pwd" minlength="6">
+            </div>
+            <div class="form-group">
+                <label>Birthday: </label>
+                <input type="date" name="bod" id="birthday" class="form-control">
+            </div>
+            <div class="form-group">
+                <label></label>
+                <button type="submit">Register</button>
+                <button type="reset" class="btn-reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

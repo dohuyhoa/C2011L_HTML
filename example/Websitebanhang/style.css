@@ -1,0 +1,83 @@
+.container {
+    width: 40%;
+    margin: 0px auto;
+}
+
+.form_group {
+    width: 100%;
+    border: 1px rgb(105, 127, 223) groove;
+    margin-bottom: 10px;
+}
+
+.header {
+    background-color: rgb(43, 133, 218);
+    color: white;
+    font-size: 18px;
+    margin: 0px;
+}
+
+h3 {
+    padding: 10px 15px;
+    margin-top: 0px;
+    padding-left: 10px;
+}
+
+.row {
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+.row label,
+.row input,
+.row select {
+    width: 95%;
+    height: 30px;
+}
+
+.btn {
+    margin: 0px,
+}
+
+.btn__add {
+    background-color: rgb(89, 219, 77);
+    color: white;
+    padding: 5px;
+    min-width: 125px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.btn__reset {
+    background-color: rgb(233, 161, 54);
+    color: white;
+    padding: 5px;
+    min-width: 125px;
+    cursor: pointer;
+    border: 0px;
+}
+
+.btn__add:hover,
+.btn__reset:hover {
+    background-color: rgb(4, 90, 61);
+}
+
+.table thead {
+    background-color: rgba(64, 64, 158, 0.57);
+}
+
+.table {
+    width: 95%;
+    padding: 10px;
+}
+
+th {
+    color: rgb(236, 193, 241);
+}
